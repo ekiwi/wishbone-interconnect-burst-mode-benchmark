@@ -2,4 +2,4 @@
 
 cd ./test
 make
-NO_WAVES=1 make test
+NO_WAVES=0 make test
