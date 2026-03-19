@@ -14,7 +14,7 @@ jobs:
       run: apt-get update -q && apt-get install -q -y git
 
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         submodules: recursive
         fetch-depth: 3
@@ -32,7 +32,7 @@ jobs:
         ./scripts/run-tests.sh
 
     - name: Upload test results
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: test-results
         path: |
@@ -48,7 +48,7 @@ jobs:
       run: apt-get update -q && apt-get install -q -y git
 
     - name: Checkout
-      uses: actions/checkout@v2
+      uses: actions/checkout@v4
       with:
         submodules: recursive
         fetch-depth: 3
