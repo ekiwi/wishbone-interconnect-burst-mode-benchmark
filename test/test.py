@@ -73,6 +73,7 @@ def test_sram_classic(offset, length):
         module="tests.test-classic",
         extra_env=extra_env,
         waves=not no_waves,
+        sim_build=f"sim_build/test_sram_classic_{length}_{offset}",
     )
 
 @pytest.mark.parametrize("offset", range(0, 16, 4))
@@ -94,6 +95,7 @@ def test_sram_incrementing(offset, length, bte):
         module="tests.test-incrementing",
         extra_env=extra_env,
         waves=not no_waves,
+        sim_build=f"sim_build/test_sram_incrementing_{length}_{offset}_{bte}",
     )
 
 @pytest.mark.parametrize("length", range(1,9))
@@ -110,6 +112,7 @@ def test_fifo_classic(length):
         module="tests.test-classic",
         extra_env=extra_env,
         waves=not no_waves,
+        sim_build=f"sim_build/test_fifo_classic_{length}",
     )
 
 @pytest.mark.parametrize("length", range(1,9))
@@ -126,4 +129,5 @@ def test_fifo_constant(length):
         module="tests.test-constant",
         extra_env=extra_env,
         waves=not no_waves,
+        sim_build=f"sim_build/test_fifo_constant_{length}",
     )
