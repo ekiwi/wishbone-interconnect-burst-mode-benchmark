@@ -6,13 +6,8 @@ on:
 
 jobs:
   test:
-    runs-on: ubuntu-latest
-    container: hdlc/sim
-
+    runs-on: ubuntu-22.04
     steps:
-    - name: Install Git
-      run: apt-get update -q && apt-get install -q -y git
-
     - name: Checkout
       uses: actions/checkout@v4
       with:
@@ -40,13 +35,8 @@ jobs:
           test/sim_build/
 
   benchmark:
-    runs-on: ubuntu-latest
-    container: hdlc/sim
-
+    runs-on: ubuntu-22.04
     steps:
-    - name: Install Git
-      run: apt-get update -q && apt-get install -q -y git
-
     - name: Checkout
       uses: actions/checkout@v4
       with:
